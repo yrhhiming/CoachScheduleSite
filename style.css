@@ -1,0 +1,229 @@
+:root {
+  --bg: #ffffff;
+  --text: #1a1a1a;
+  --muted: #6b6b6b;
+  --accent: #c0392b;
+  --header-bg: #98a2e3;
+  --line: #e6e6e6;
+  --card-bg: #f7f8fc;
+  --off-bg: #f7dce4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ── 頂部 hero ───────────────────────────────── */
+.hero {
+  background: linear-gradient(180deg, var(--header-bg) 0%, #ffffff 100%);
+  padding: 56px 0 40px;
+  text-align: center;
+}
+
+.hero .icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 20px;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  font-size: 36px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.hero h1 {
+  margin: 0 0 8px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #2a2f5c;
+}
+
+.hero p {
+  margin: 0;
+  font-size: 16px;
+  color: #3a3f6c;
+}
+
+/* ── 導覽列 ───────────────────────────────── */
+nav.top {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 14px;
+}
+
+nav.top a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+nav.top a:hover {
+  color: var(--accent);
+}
+
+/* ── 一般內文區塊 ───────────────────────────────── */
+section {
+  padding: 40px 0;
+}
+
+section + section {
+  border-top: 1px solid var(--line);
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 4px;
+}
+
+h2 .step-no {
+  color: var(--accent);
+  font-weight: 700;
+  margin-right: 6px;
+}
+
+.step-desc {
+  color: var(--muted);
+  font-size: 15px;
+  margin: 0 0 20px;
+}
+
+/* ── 步驟卡片（圖 + 文字）───────────────────────── */
+.step {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.step.reverse {
+  flex-direction: row-reverse;
+}
+
+.step img {
+  width: 220px;
+  flex: none;
+  border-radius: 18px;
+  border: 6px solid #111;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  display: block;
+}
+
+.step .text {
+  flex: 1;
+}
+
+.step .text p {
+  margin: 0 0 10px;
+  font-size: 15px;
+}
+
+.step .text ul {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 15px;
+}
+
+.step .text li {
+  margin-bottom: 6px;
+}
+
+.note {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: var(--card-bg);
+  font-size: 13px;
+  color: #444;
+}
+
+.note.off {
+  background: var(--off-bg);
+}
+
+/* ── Feature grid（首頁摘要用）───────────────────── */
+.features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.feature {
+  background: var(--card-bg);
+  border-radius: 14px;
+  padding: 16px;
+}
+
+.feature .f-title {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.feature .f-body {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* ── Footer ───────────────────────────────── */
+footer {
+  padding: 40px 0 60px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ── 隱私政策頁專用 ───────────────────────────────── */
+.policy h2 {
+  margin-top: 28px;
+}
+
+.policy p,
+.policy li {
+  font-size: 15px;
+  color: #333;
+}
+
+/* ── RWD：手機上圖文改上下疊 ───────────────────────── */
+@media (max-width: 560px) {
+  .step,
+  .step.reverse {
+    flex-direction: column;
+  }
+  .step img {
+    width: 65%;
+    max-width: 260px;
+  }
+  .features {
+    grid-template-columns: 1fr;
+  }
+  .hero h1 {
+    font-size: 24px;
+  }
+}
