@@ -5,13 +5,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>教練排課表 — 支援與操作說明</title>
   <meta name="description" content="教練排課表：為單一教練打造的極簡排課工具。拖曳排課、管理學生、設定休假日，完全離線、沒有帳號、沒有廣告。" />
+  <meta name="keywords" content="教練排課表,排課 App,健身教練,私人教練,課表管理,學生管理,拖曳排課,CoachSchedule" />
+  <link rel="canonical" href="https://yrhhiming.github.io/CoachScheduleSite/" />
+
+  <!-- Open Graph / 社群分享預覽卡 -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="教練排課表" />
+  <meta property="og:title" content="教練排課表 — 為個人教練打造的極簡排課工具" />
+  <meta property="og:description" content="拖曳排課、管理學生、設定休假日，完全離線、沒有帳號、沒有廣告。" />
+  <meta property="og:url" content="https://yrhhiming.github.io/CoachScheduleSite/" />
+  <meta property="og:image" content="https://yrhhiming.github.io/CoachScheduleSite/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="zh_TW" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="教練排課表 — 為個人教練打造的極簡排課工具" />
+  <meta name="twitter:description" content="拖曳排課、管理學生、設定休假日，完全離線、沒有帳號、沒有廣告。" />
+  <meta name="twitter:image" content="https://yrhhiming.github.io/CoachScheduleSite/og-image.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
   <link rel="stylesheet" href="style.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "教練排課表",
+    "alternateName": "CoachSchedule",
+    "applicationCategory": "ProductivityApplication",
+    "operatingSystem": "iOS",
+    "description": "為單一教練打造的極簡排課工具。拖曳排課、管理學生、設定休假日，完全離線、沒有帳號、沒有廣告。",
+    "url": "https://yrhhiming.github.io/CoachScheduleSite/",
+    "image": "https://yrhhiming.github.io/CoachScheduleSite/assets/brand/app-icon.png",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "TWD"
+    }
+  }
+  </script>
 </head>
 <body>
 
   <header class="hero">
     <div class="wrap">
-      <div class="icon">📅</div>
+      <img class="icon" src="assets/brand/app-icon.png" alt="教練排課表 App 圖示" />
       <h1>教練排課表</h1>
       <p>為個人教練打造的極簡排課工具——拖曳排課、管理學生、設定休假日，完全離線。</p>
     </div>
@@ -143,8 +186,10 @@
     </div>
 
     <div class="wrap">
-      <div style="padding: 24px 0;">
+      <div class="featured">
+        <span class="featured-badge">★ 排課引擎核心</span>
         <h2><span class="step-no">7</span>移動、複製、取代課次</h2>
+        <p class="step-desc" style="margin-bottom: 20px;">這是這個 App 排課邏輯的核心，也是跟一般行事曆最大的不同：<strong>一格一人，絕不重複</strong>。</p>
         <div class="step">
           <img src="assets/screenshots/IMG_2314.jpg" alt="長按課次拖曳，放到空格，下方跳出複製、移動或取消" />
           <div class="text">
@@ -156,7 +201,7 @@
         <div class="step reverse" style="margin-top: 28px;">
           <img src="assets/screenshots/IMG_2315.jpg" alt="拖到已有課次的格子，下方只會出現取代與取消" />
           <div class="text">
-            <p>放到<strong>已有課次的格子</strong>：一格一人、不能重複，這時只能選「取代」或「取消」。</p>
+            <p class="highlight-rule">放到<strong>已有課次的格子</strong>：一格一人、不能重複，這時只能選「取代」或「取消」——不會不小心把兩堂課疊在同一格。</p>
           </div>
         </div>
       </div>
